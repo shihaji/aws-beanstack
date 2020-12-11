@@ -10,7 +10,7 @@ public class HelloController {
 	@RequestMapping
 	public String hello() {
 		
-		return "hello you tube";
+		return "hello you tube and everyone";
 	}
 
 }
