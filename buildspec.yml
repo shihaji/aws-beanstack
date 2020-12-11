@@ -1,18 +1,19 @@
 version: 0.2
-phases: 
+phases:
+ 
   pre_build:
     commands:
-    - echo "Entered the pre build phase"
+    - echo In the pre_build phase...
   build:
     commands:
-    - echo "Entered the build phase"
-    - mvn clean prepare-package war:exploded
+    - echo Build started on `date`
   post_build:
     commands:
-    - echo "Entered the post-build phase"
-    - mv target/deploy ./
-artifacts: 
+    - echo Build completed on `date`
+    - mvn package
+    - mv target/AwsPro.war AwsPro.war
+artifacts:
   files:
-    - deploy/**/*
-    
+  - AwsPro.war
+  - .ebextensions/**/*
   
