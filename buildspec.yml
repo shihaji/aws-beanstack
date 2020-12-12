@@ -11,8 +11,8 @@ phases:
     commands:
     - echo Build completed on `date`
     - mvn package
-    - mv target/AwsPro.war AwsPro.war
+    - mv target/AwsPro.war ROOT.war
 artifacts:
   files:
-  - AwsPro.war
+  - ROOT.war
   - .ebextensions/**/*
